@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Transformando seu negócio em uma loja virtual",
+    "description": "Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você.",
+    "image": "/assets/primeiro-post.png",
+    "date": "2024-12-20T00:00:00.000Z",
+    "body": {
+      "raw": "\nSe você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos.\n\nVeja o que nossa plataforma oferece:\n\n**Loja responsiva**: Sua loja estará otimizada para todos os dispositivos, garantindo uma experiência de compra perfeita em qualquer tela.\n\n**Gestão de inventário**: Organize seus produtos com facilidade e mantenha o controle sobre o estoque de sua loja.\n\n**Formas de pagamento**: Aceite pagamentos de forma rápida e segura com várias opções de gateways de pagamento.\n\n**SEO e Marketing**: Nossa plataforma já vem com ferramentas de SEO integradas para ajudar sua loja a ser encontrada mais facilmente nos motores de busca.\n\n**Suporte especializado**: Nossa equipe de suporte está sempre disponível para ajudar você com qualquer dúvida ou desafio.\n\nEstá pronto para colocar seus produtos no mundo? Com o Site.Set, criar sua loja online é rápido, simples e acessível. Desde a configuração do site até a finalização da compra, oferecemos todas as ferramentas necessárias para você vender com sucesso.",
+      "html": "<p>Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos.</p>\n<p>Veja o que nossa plataforma oferece:</p>\n<p><strong>Loja responsiva</strong>: Sua loja estará otimizada para todos os dispositivos, garantindo uma experiência de compra perfeita em qualquer tela.</p>\n<p><strong>Gestão de inventário</strong>: Organize seus produtos com facilidade e mantenha o controle sobre o estoque de sua loja.</p>\n<p><strong>Formas de pagamento</strong>: Aceite pagamentos de forma rápida e segura com várias opções de gateways de pagamento.</p>\n<p><strong>SEO e Marketing</strong>: Nossa plataforma já vem com ferramentas de SEO integradas para ajudar sua loja a ser encontrada mais facilmente nos motores de busca.</p>\n<p><strong>Suporte especializado</strong>: Nossa equipe de suporte está sempre disponível para ajudar você com qualquer dúvida ou desafio.</p>\n<p>Está pronto para colocar seus produtos no mundo? Com o Site.Set, criar sua loja online é rápido, simples e acessível. Desde a configuração do site até a finalização da compra, oferecemos todas as ferramentas necessárias para você vender com sucesso.</p>"
+    },
+    "_id": "primeiro-post.md",
+    "_raw": {
+      "sourceFilePath": "primeiro-post.md",
+      "sourceFileName": "primeiro-post.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "primeiro-post"
+    },
+    "type": "Post",
+    "slug": "primeiro-post"
+  }
+]
