@@ -1,11 +1,11 @@
-import Image from "next/image";
+import { Logo } from "@/components/logo";
 import Link from "next/link";
-import { Logo } from "../logo";
+ 
 
 export function Footer() {
   return (
     <footer className="bg-gray-500">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-52">
+      <div className="container">
         <div className="flex justify-between gap-8 py-8">
           <Logo />
 

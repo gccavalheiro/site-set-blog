@@ -1,9 +1,7 @@
-import { HeroSection } from "@/components/sections/hero-section";
+import { LandingPage } from "@/templates/landing-page";
 
 export default function Home() {
   return (
-    <article className="flex flex-col">
-      <HeroSection />
-    </article>
+    <LandingPage/>
   );
 }
