@@ -1,5 +1,22 @@
 // contentlayer.config.ts
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  defineNestedType,
+  makeSource
+} from "contentlayer/source-files";
+var Author = defineNestedType(() => ({
+  name: "Author",
+  fields: {
+    name: {
+      type: "string",
+      required: true
+    },
+    avatar: {
+      type: "string",
+      required: true
+    }
+  }
+}));
 var Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.md`,
@@ -7,7 +24,11 @@ var Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     description: { type: "string", required: true },
     image: { type: "string", required: true },
-    date: { type: "date", required: true }
+    date: { type: "date", required: true },
+    author: {
+      type: "nested",
+      of: Author
+    }
   },
   computedFields: {
     slug: {
@@ -21,4 +42,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-H43MI3SY.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-WKTB7YUG.mjs.map

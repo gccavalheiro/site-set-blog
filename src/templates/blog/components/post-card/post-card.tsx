@@ -28,14 +28,16 @@ export function PostCard(props: PostCardProps) {
         {/* Imagem Container */}
         <div className="relative">
           <div className="absolute bg-gray-600 rounded-bl-md top-0 right-0 px-3 py-1">
-            <span className="text-body-xs text-gray-300">{date}</span>
+            <time className="text-body-xs text-gray-300" dateTime={date}>
+              {new Date(date).toLocaleDateString("pt-BR")}
+            </time>
           </div>
           <Image
             src={image}
-            alt=""
+            alt={title}
             width={288}
             height={144}
-            className="w-full h-40 object-cover rounded-sm object-center"
+            className="w-full h-60 md:h-40 object-cover rounded-sm object-center"
           />
         </div>
 
@@ -55,7 +57,7 @@ export function PostCard(props: PostCardProps) {
           <div className="relative h-5 w-5 md:h-6 md:w-6 overflow-hidden rounded-full border-blue-200 border-[1px]">
             <Image
               src={author.avatar}
-              alt=""
+              alt={author.name}
               fill
               className="object-cover rounded-md"
             />
