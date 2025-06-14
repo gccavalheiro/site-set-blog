@@ -61,7 +61,7 @@ export function PostCard(props: PostCardProps) {
         {/* Post footer */}
         <div className="flex px-2 mt-auto pb-2 pt-3 items-center gap-3 border-t border-gray-400">
           <AvatarContainer>
-            <AvatarImage src={author.avatar} alt={author.name} size="xs" />
+            <AvatarImage src={author.avatar} alt={author.name} size="sm" />
             <AvatarContent>
               <AvatarTitle className="text-gray-300">{author.name}</AvatarTitle>
             </AvatarContent>

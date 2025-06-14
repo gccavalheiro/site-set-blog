@@ -15,23 +15,20 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { useShare } from "@/hooks/use-share";
-import { allPosts } from "contentlayer/generated";
+import { Post } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-export function PostPage() {
-  const router = useRouter();
-  const slug = router.query.slug;
-  const post =
-    typeof slug === "string"
-      ? allPosts.find(
-          (post) => post.slug.toLocaleLowerCase() === slug.toLocaleLowerCase()
-        )
-      : undefined;
+export type PostProps = {
+  post: Post;
+};
+
+export function PostPage(props: PostProps) {
+  const { post } = props;
+
   const publishedDate =
     post?.date && new Date(post?.date).toLocaleDateString("pt-BR");
-  const postUrl = `https://site.set/blog${slug}`;
+  const postUrl = `https://site.set/blog${post.slug}`;
 
   const { shareButtons } = useShare({
     url: postUrl,
@@ -103,7 +100,9 @@ export function PostPage() {
 
         <aside className="space-y-6">
           <div className="py-4 md:py-0">
-            <h2 className="mb-4 hidden lg:block text-heading-xs text-gray-100">Compartilhar</h2>
+            <h2 className="mb-4 hidden lg:block text-heading-xs text-gray-100">
+              Compartilhar
+            </h2>
 
             <div className="flex lg:flex-col gap-2">
               {shareButtons.map((provider) => (
