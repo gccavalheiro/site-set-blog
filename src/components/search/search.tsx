@@ -1,17 +1,20 @@
-import { cn } from "@/lib/utils";
-import { CircleX, SearchIcon } from "lucide-react";
-import { useRouter } from "next/router";
 import React from "react";
 
+import { cn } from "@/lib/utils";
+import { CircleX, SearchIcon } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+
 export function Search() {
+  const inputRef = React.useRef<HTMLInputElement | null>(null);
   const router = useRouter();
-  const query = (router.query.q as string) ?? '';
+  const searchParams = useSearchParams();
+  const query = searchParams?.get("q") ?? "";
+  const hasQuery = !!searchParams?.has("q");
 
   function handleValueChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value;
 
-    router.push(`/blog?q=${encodeURIComponent(value)}`, undefined, {
-      shallow: true,
+    router.push(`/blog?q=${encodeURIComponent(value)}`, {
       scroll: false,
     });
   }
@@ -28,11 +31,16 @@ export function Search() {
   );
 
   function handleClearSearch() {
-    router.push("/blog", undefined, {
-      shallow: true,
+    router.push("/blog", {
       scroll: false,
     });
   }
+
+  React.useEffect(() => {
+    if (hasQuery) {
+      inputRef.current?.focus();
+    }
+  }, [hasQuery]);
 
   return (
     <form onSubmit={handleSearch} className="relative w-full md:w-60 group">
@@ -47,6 +55,7 @@ export function Search() {
         type="text"
         placeholder="Buscar"
         value={query}
+        ref={inputRef}
         onChange={handleValueChange}
         className="h-10 w-full md:w-60 bg-transparent border border-gray-400 pl-9 text-gray-100 rounded-md text-body-sm outline-none transition-all duration-200 focus-within:border-blue-300 focus-within:ring-1 focus-within:ring-blue-300 placeholder:text-gray-300 placeholder:text-body-sm"
       />
