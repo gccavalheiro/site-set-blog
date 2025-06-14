@@ -1,0 +1,26 @@
+{
+  "title": "Server-Side Rendering (SSR) no Next.js",
+  "description": "Saiba o que é SSR, como funciona no Next.js e exemplos práticos de uso.",
+  "image": "/assets/segundo-post.png",
+  "date": "2025-06-12T13:20:00.000Z",
+  "author": {
+    "name": "Cristofer Carder",
+    "avatar": "/customer-02.png",
+    "type": "Author",
+    "_raw": {}
+  },
+  "body": {
+    "raw": "\n# Server-Side Rendering (SSR) no Next.js\n\nO Server-Side Rendering (SSR) é uma técnica onde as páginas são renderizadas no servidor a cada requisição, entregando HTML pronto para o navegador. No Next.js, o SSR é utilizado para garantir que o conteúdo esteja sempre atualizado, sendo ideal para páginas dinâmicas.\n\n\n## Como funciona o SSR?\n\nQuando um usuário acessa uma página com SSR, o Next.js executa o código no servidor, busca os dados necessários e retorna o HTML já renderizado. Isso melhora o SEO e a performance inicial da página.\n\n## Exemplo de uso\n\n```js\nexport async function getServerSideProps() {\n  // Busca dados de uma API ou banco de dados\n  return {\n    props: { /* dados */ },\n  }\n}\n```\n\n## Vantagens do SSR\n\n- **Melhor SEO:** O conteúdo já vem renderizado, facilitando a indexação por mecanismos de busca.\n- **Conteúdo sempre atualizado:** Cada requisição gera uma nova renderização, mostrando dados em tempo real.\n- **Performance inicial aprimorada:** O usuário recebe o HTML pronto, acelerando o carregamento inicial da página.\n\n## Desvantagens do SSR\n\n- **Maior tempo de resposta:** Cada requisição exige processamento no servidor, podendo aumentar a latência.\n- **Carga no servidor:** O servidor precisa renderizar cada página a cada acesso, exigindo mais recursos.\n- **Complexidade:** Pode ser mais complexo de implementar e depurar em comparação com outras abordagens.\n",
+    "html": "<h1>Server-Side Rendering (SSR) no Next.js</h1>\n<p>O Server-Side Rendering (SSR) é uma técnica onde as páginas são renderizadas no servidor a cada requisição, entregando HTML pronto para o navegador. No Next.js, o SSR é utilizado para garantir que o conteúdo esteja sempre atualizado, sendo ideal para páginas dinâmicas.</p>\n<h2>Como funciona o SSR?</h2>\n<p>Quando um usuário acessa uma página com SSR, o Next.js executa o código no servidor, busca os dados necessários e retorna o HTML já renderizado. Isso melhora o SEO e a performance inicial da página.</p>\n<h2>Exemplo de uso</h2>\n<pre><code class=\"language-js\">export async function getServerSideProps() {\n  // Busca dados de uma API ou banco de dados\n  return {\n    props: { /* dados */ },\n  }\n}\n</code></pre>\n<h2>Vantagens do SSR</h2>\n<ul>\n<li><strong>Melhor SEO:</strong> O conteúdo já vem renderizado, facilitando a indexação por mecanismos de busca.</li>\n<li><strong>Conteúdo sempre atualizado:</strong> Cada requisição gera uma nova renderização, mostrando dados em tempo real.</li>\n<li><strong>Performance inicial aprimorada:</strong> O usuário recebe o HTML pronto, acelerando o carregamento inicial da página.</li>\n</ul>\n<h2>Desvantagens do SSR</h2>\n<ul>\n<li><strong>Maior tempo de resposta:</strong> Cada requisição exige processamento no servidor, podendo aumentar a latência.</li>\n<li><strong>Carga no servidor:</strong> O servidor precisa renderizar cada página a cada acesso, exigindo mais recursos.</li>\n<li><strong>Complexidade:</strong> Pode ser mais complexo de implementar e depurar em comparação com outras abordagens.</li>\n</ul>"
+  },
+  "_id": "quarto-post.md",
+  "_raw": {
+    "sourceFilePath": "quarto-post.md",
+    "sourceFileName": "quarto-post.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "quarto-post"
+  },
+  "type": "Post",
+  "slug": "quarto-post"
+}

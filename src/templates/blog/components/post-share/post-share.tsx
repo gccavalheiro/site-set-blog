@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Button } from "@/components/ui/button";
 import { useShare } from "@/hooks/use-share";
 
@@ -28,7 +28,7 @@ export function PostShare(props: PostShareProps) {
             <Button
               key={provider.provider}
               variant="outline"
-              className="lg:justify-start w-full lg:w-fit "
+              className="lg:justify-start w-full"
               onClick={() => provider.action()}
               title={provider.name}
             >

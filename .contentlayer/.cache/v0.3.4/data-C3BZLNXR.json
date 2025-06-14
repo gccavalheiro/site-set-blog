@@ -31,6 +31,68 @@
       "hasWarnings": false,
       "documentTypeName": "Post"
     },
+    "quarto-post.md": {
+      "document": {
+        "title": "Server-Side Rendering (SSR) no Next.js",
+        "description": "Saiba o que é SSR, como funciona no Next.js e exemplos práticos de uso.",
+        "image": "/assets/segundo-post.png",
+        "date": "2025-06-12T13:20:00.000Z",
+        "author": {
+          "name": "Cristofer Carder",
+          "avatar": "/customer-02.png",
+          "type": "Author",
+          "_raw": {}
+        },
+        "body": {
+          "raw": "\n# Server-Side Rendering (SSR) no Next.js\n\nO Server-Side Rendering (SSR) é uma técnica onde as páginas são renderizadas no servidor a cada requisição, entregando HTML pronto para o navegador. No Next.js, o SSR é utilizado para garantir que o conteúdo esteja sempre atualizado, sendo ideal para páginas dinâmicas.\n\n\n## Como funciona o SSR?\n\nQuando um usuário acessa uma página com SSR, o Next.js executa o código no servidor, busca os dados necessários e retorna o HTML já renderizado. Isso melhora o SEO e a performance inicial da página.\n\n## Exemplo de uso\n\n```js\nexport async function getServerSideProps() {\n  // Busca dados de uma API ou banco de dados\n  return {\n    props: { /* dados */ },\n  }\n}\n```\n\n## Vantagens do SSR\n\n- **Melhor SEO:** O conteúdo já vem renderizado, facilitando a indexação por mecanismos de busca.\n- **Conteúdo sempre atualizado:** Cada requisição gera uma nova renderização, mostrando dados em tempo real.\n- **Performance inicial aprimorada:** O usuário recebe o HTML pronto, acelerando o carregamento inicial da página.\n\n## Desvantagens do SSR\n\n- **Maior tempo de resposta:** Cada requisição exige processamento no servidor, podendo aumentar a latência.\n- **Carga no servidor:** O servidor precisa renderizar cada página a cada acesso, exigindo mais recursos.\n- **Complexidade:** Pode ser mais complexo de implementar e depurar em comparação com outras abordagens.\n",
+          "html": "<h1>Server-Side Rendering (SSR) no Next.js</h1>\n<p>O Server-Side Rendering (SSR) é uma técnica onde as páginas são renderizadas no servidor a cada requisição, entregando HTML pronto para o navegador. No Next.js, o SSR é utilizado para garantir que o conteúdo esteja sempre atualizado, sendo ideal para páginas dinâmicas.</p>\n<h2>Como funciona o SSR?</h2>\n<p>Quando um usuário acessa uma página com SSR, o Next.js executa o código no servidor, busca os dados necessários e retorna o HTML já renderizado. Isso melhora o SEO e a performance inicial da página.</p>\n<h2>Exemplo de uso</h2>\n<pre><code class=\"language-js\">export async function getServerSideProps() {\n  // Busca dados de uma API ou banco de dados\n  return {\n    props: { /* dados */ },\n  }\n}\n</code></pre>\n<h2>Vantagens do SSR</h2>\n<ul>\n<li><strong>Melhor SEO:</strong> O conteúdo já vem renderizado, facilitando a indexação por mecanismos de busca.</li>\n<li><strong>Conteúdo sempre atualizado:</strong> Cada requisição gera uma nova renderização, mostrando dados em tempo real.</li>\n<li><strong>Performance inicial aprimorada:</strong> O usuário recebe o HTML pronto, acelerando o carregamento inicial da página.</li>\n</ul>\n<h2>Desvantagens do SSR</h2>\n<ul>\n<li><strong>Maior tempo de resposta:</strong> Cada requisição exige processamento no servidor, podendo aumentar a latência.</li>\n<li><strong>Carga no servidor:</strong> O servidor precisa renderizar cada página a cada acesso, exigindo mais recursos.</li>\n<li><strong>Complexidade:</strong> Pode ser mais complexo de implementar e depurar em comparação com outras abordagens.</li>\n</ul>"
+        },
+        "_id": "quarto-post.md",
+        "_raw": {
+          "sourceFilePath": "quarto-post.md",
+          "sourceFileName": "quarto-post.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "quarto-post"
+        },
+        "type": "Post",
+        "slug": "quarto-post"
+      },
+      "documentHash": "1749877620874",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "quinto-post.md": {
+      "document": {
+        "title": "Static Site Generation (SSG) no Next.js",
+        "description": "Entenda o que é SSG, como funciona no Next.js e exemplos práticos de uso.",
+        "image": "/assets/segundo-post.png",
+        "date": "2025-06-13T13:20:00.000Z",
+        "author": {
+          "name": "Cristofer Carder",
+          "avatar": "/customer-02.png",
+          "type": "Author",
+          "_raw": {}
+        },
+        "body": {
+          "raw": "\n# Static Site Generation (SSG) no Next.js\n\nO Static Site Generation (SSG) é uma técnica onde as páginas são geradas estaticamente durante o build, resultando em arquivos HTML prontos para serem servidos rapidamente ao usuário. No Next.js, isso é feito utilizando a função `getStaticProps`.\n\n## Como implementar SSG no Next.js\nBasta exportar a função `getStaticProps` em sua página:\n\n```tsx\nexport async function getStaticProps() {\n  // Buscar dados em tempo de build\n  return {\n    props: { /* dados */ },\n  }\n}\n```\n\nSSG é recomendado para páginas cujo conteúdo pode ser gerado antecipadamente e não depende de dados dinâmicos a cada acesso.\n\n## Vantagens do SSG\n- Performance superior, pois as páginas são servidas como arquivos estáticos.\n- Custos reduzidos de servidor.\n- Ideal para conteúdo que não muda com frequência, como blogs e documentações.\n\n## Desvantagens do SSG\n- Atualizações de conteúdo exigem novo build e deploy do site.\n- Não é ideal para páginas com dados altamente dinâmicos.\n- Pode aumentar o tempo de build em projetos muito grandes.\n- Menos flexível para personalização por usuário em tempo real.",
+          "html": "<h1>Static Site Generation (SSG) no Next.js</h1>\n<p>O Static Site Generation (SSG) é uma técnica onde as páginas são geradas estaticamente durante o build, resultando em arquivos HTML prontos para serem servidos rapidamente ao usuário. No Next.js, isso é feito utilizando a função <code>getStaticProps</code>.</p>\n<h2>Como implementar SSG no Next.js</h2>\n<p>Basta exportar a função <code>getStaticProps</code> em sua página:</p>\n<pre><code class=\"language-tsx\">export async function getStaticProps() {\n  // Buscar dados em tempo de build\n  return {\n    props: { /* dados */ },\n  }\n}\n</code></pre>\n<p>SSG é recomendado para páginas cujo conteúdo pode ser gerado antecipadamente e não depende de dados dinâmicos a cada acesso.</p>\n<h2>Vantagens do SSG</h2>\n<ul>\n<li>Performance superior, pois as páginas são servidas como arquivos estáticos.</li>\n<li>Custos reduzidos de servidor.</li>\n<li>Ideal para conteúdo que não muda com frequência, como blogs e documentações.</li>\n</ul>\n<h2>Desvantagens do SSG</h2>\n<ul>\n<li>Atualizações de conteúdo exigem novo build e deploy do site.</li>\n<li>Não é ideal para páginas com dados altamente dinâmicos.</li>\n<li>Pode aumentar o tempo de build em projetos muito grandes.</li>\n<li>Menos flexível para personalização por usuário em tempo real.</li>\n</ul>"
+        },
+        "_id": "quinto-post.md",
+        "_raw": {
+          "sourceFilePath": "quinto-post.md",
+          "sourceFileName": "quinto-post.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "quinto-post"
+        },
+        "type": "Post",
+        "slug": "quinto-post"
+      },
+      "documentHash": "1749877614685",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
     "segundo-post.md": {
       "document": {
         "title": "5 motivos para escolher o Site.Set",
@@ -59,6 +121,37 @@
         "slug": "segundo-post"
       },
       "documentHash": "1749766614398",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "terceiro-post.md": {
+      "document": {
+        "title": "Incremental Static Regeneration (ISR) no Next.js",
+        "description": "Entenda o que é ISR, como funciona no Next.js e exemplos práticos de uso.",
+        "image": "/assets/segundo-post.png",
+        "date": "2025-06-14T13:20:00.000Z",
+        "author": {
+          "name": "Aspen Dokidis",
+          "avatar": "/customer-01.png",
+          "type": "Author",
+          "_raw": {}
+        },
+        "body": {
+          "raw": "\n# Incremental Static Regeneration (ISR) no Next.js\n\nO Incremental Static Regeneration (ISR) é uma funcionalidade do Next.js que permite atualizar páginas estáticas após o deploy, sem precisar reconstruir todo o site. Com o ISR, você pode gerar ou atualizar páginas sob demanda, melhorando a performance e a experiência do usuário.\n\n## Como funciona o ISR?\n\nNo Next.js, ao usar o ISR, você define um tempo de revalidação para cada página. Quando uma requisição chega após esse tempo, o Next.js gera uma nova versão da página em background e serve a versão atual até a nova estar pronta. Assim, o conteúdo está sempre atualizado sem perder os benefícios do static site.\n\n## Exemplo de uso\n\n```js\nexport async function getStaticProps() {\n  // Busca dados de uma API ou banco de dados\n  return {\n    props: { /* dados */ },\n    revalidate: 60, // revalida a cada 60 segundos\n  }\n}\n```\n\n## Vantagens do ISR\n- Atualização automática de páginas estáticas\n- Melhor performance\n- Menor custo de infraestrutura\n- Experiência de usuário aprimorada\n\nO ISR é ideal para blogs, e-commerces e sites que precisam de conteúdo atualizado frequentemente, mas querem manter a performance de páginas estáticas.\n\n## Desvantagens do ISR\n- Pode haver atraso na atualização do conteúdo até a próxima revalidação\n- Complexidade adicional na configuração e monitoramento\n- Possíveis inconsistências temporárias entre usuários durante a atualização\n- Nem todos os casos de uso se beneficiam do ISR (ex: páginas altamente dinâmicas)",
+          "html": "<h1>Incremental Static Regeneration (ISR) no Next.js</h1>\n<p>O Incremental Static Regeneration (ISR) é uma funcionalidade do Next.js que permite atualizar páginas estáticas após o deploy, sem precisar reconstruir todo o site. Com o ISR, você pode gerar ou atualizar páginas sob demanda, melhorando a performance e a experiência do usuário.</p>\n<h2>Como funciona o ISR?</h2>\n<p>No Next.js, ao usar o ISR, você define um tempo de revalidação para cada página. Quando uma requisição chega após esse tempo, o Next.js gera uma nova versão da página em background e serve a versão atual até a nova estar pronta. Assim, o conteúdo está sempre atualizado sem perder os benefícios do static site.</p>\n<h2>Exemplo de uso</h2>\n<pre><code class=\"language-js\">export async function getStaticProps() {\n  // Busca dados de uma API ou banco de dados\n  return {\n    props: { /* dados */ },\n    revalidate: 60, // revalida a cada 60 segundos\n  }\n}\n</code></pre>\n<h2>Vantagens do ISR</h2>\n<ul>\n<li>Atualização automática de páginas estáticas</li>\n<li>Melhor performance</li>\n<li>Menor custo de infraestrutura</li>\n<li>Experiência de usuário aprimorada</li>\n</ul>\n<p>O ISR é ideal para blogs, e-commerces e sites que precisam de conteúdo atualizado frequentemente, mas querem manter a performance de páginas estáticas.</p>\n<h2>Desvantagens do ISR</h2>\n<ul>\n<li>Pode haver atraso na atualização do conteúdo até a próxima revalidação</li>\n<li>Complexidade adicional na configuração e monitoramento</li>\n<li>Possíveis inconsistências temporárias entre usuários durante a atualização</li>\n<li>Nem todos os casos de uso se beneficiam do ISR (ex: páginas altamente dinâmicas)</li>\n</ul>"
+        },
+        "_id": "terceiro-post.md",
+        "_raw": {
+          "sourceFilePath": "terceiro-post.md",
+          "sourceFileName": "terceiro-post.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "terceiro-post"
+        },
+        "type": "Post",
+        "slug": "terceiro-post"
+      },
+      "documentHash": "1749877614682",
       "hasWarnings": false,
       "documentTypeName": "Post"
     }

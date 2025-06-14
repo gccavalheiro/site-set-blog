@@ -51,7 +51,7 @@ export function PostPage(props: PostProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6 lg:gap-12">
         <article className="bg-gray-600 rounded-lg overflow-hidden border-gray-400 border-[1px]">
-          <figure className="relative aspect-[16/10] w-full overflow-hidden rounded-lg">
+          <figure className="relative aspect-[16/10] w-full">
             <Image
               src={post?.image ?? ""}
               alt={post?.title ?? ""}
@@ -92,7 +92,11 @@ export function PostPage(props: PostProps) {
           </div>
         </article>
 
-        <PostShare description={post.description} url={postUrl} title={post.title} />
+        <PostShare
+          description={post.description}
+          url={postUrl}
+          title={post.title}
+        />
       </div>
     </main>
   );

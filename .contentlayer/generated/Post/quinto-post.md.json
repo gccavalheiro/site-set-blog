@@ -1,0 +1,26 @@
+{
+  "title": "Static Site Generation (SSG) no Next.js",
+  "description": "Entenda o que é SSG, como funciona no Next.js e exemplos práticos de uso.",
+  "image": "/assets/segundo-post.png",
+  "date": "2025-06-13T13:20:00.000Z",
+  "author": {
+    "name": "Cristofer Carder",
+    "avatar": "/customer-02.png",
+    "type": "Author",
+    "_raw": {}
+  },
+  "body": {
+    "raw": "\n# Static Site Generation (SSG) no Next.js\n\nO Static Site Generation (SSG) é uma técnica onde as páginas são geradas estaticamente durante o build, resultando em arquivos HTML prontos para serem servidos rapidamente ao usuário. No Next.js, isso é feito utilizando a função `getStaticProps`.\n\n## Como implementar SSG no Next.js\nBasta exportar a função `getStaticProps` em sua página:\n\n```tsx\nexport async function getStaticProps() {\n  // Buscar dados em tempo de build\n  return {\n    props: { /* dados */ },\n  }\n}\n```\n\nSSG é recomendado para páginas cujo conteúdo pode ser gerado antecipadamente e não depende de dados dinâmicos a cada acesso.\n\n## Vantagens do SSG\n- Performance superior, pois as páginas são servidas como arquivos estáticos.\n- Custos reduzidos de servidor.\n- Ideal para conteúdo que não muda com frequência, como blogs e documentações.\n\n## Desvantagens do SSG\n- Atualizações de conteúdo exigem novo build e deploy do site.\n- Não é ideal para páginas com dados altamente dinâmicos.\n- Pode aumentar o tempo de build em projetos muito grandes.\n- Menos flexível para personalização por usuário em tempo real.",
+    "html": "<h1>Static Site Generation (SSG) no Next.js</h1>\n<p>O Static Site Generation (SSG) é uma técnica onde as páginas são geradas estaticamente durante o build, resultando em arquivos HTML prontos para serem servidos rapidamente ao usuário. No Next.js, isso é feito utilizando a função <code>getStaticProps</code>.</p>\n<h2>Como implementar SSG no Next.js</h2>\n<p>Basta exportar a função <code>getStaticProps</code> em sua página:</p>\n<pre><code class=\"language-tsx\">export async function getStaticProps() {\n  // Buscar dados em tempo de build\n  return {\n    props: { /* dados */ },\n  }\n}\n</code></pre>\n<p>SSG é recomendado para páginas cujo conteúdo pode ser gerado antecipadamente e não depende de dados dinâmicos a cada acesso.</p>\n<h2>Vantagens do SSG</h2>\n<ul>\n<li>Performance superior, pois as páginas são servidas como arquivos estáticos.</li>\n<li>Custos reduzidos de servidor.</li>\n<li>Ideal para conteúdo que não muda com frequência, como blogs e documentações.</li>\n</ul>\n<h2>Desvantagens do SSG</h2>\n<ul>\n<li>Atualizações de conteúdo exigem novo build e deploy do site.</li>\n<li>Não é ideal para páginas com dados altamente dinâmicos.</li>\n<li>Pode aumentar o tempo de build em projetos muito grandes.</li>\n<li>Menos flexível para personalização por usuário em tempo real.</li>\n</ul>"
+  },
+  "_id": "quinto-post.md",
+  "_raw": {
+    "sourceFilePath": "quinto-post.md",
+    "sourceFileName": "quinto-post.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "quinto-post"
+  },
+  "type": "Post",
+  "slug": "quinto-post"
+}
