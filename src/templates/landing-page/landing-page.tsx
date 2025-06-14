@@ -1,9 +1,8 @@
 import {
-  CallToActionSection,
   CustomerStorySection,
   FeatureSection,
   HeroSection,
-  SupportSection,
+  SupportSection
 } from "@/templates/landing-page/sections";
 
 export function LandingPage() {
@@ -13,7 +12,6 @@ export function LandingPage() {
       <FeatureSection />
       <SupportSection />
       <CustomerStorySection />
-      <CallToActionSection />
     </article>
   );
 }

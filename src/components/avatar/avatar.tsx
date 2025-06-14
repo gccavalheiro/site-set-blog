@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { cva, VariantProps } from "class-variance-authority";
 import Image, { ImageProps } from "next/image";
 
 type AvatarContainerProps = {
@@ -40,11 +41,30 @@ function AvatarDescription(props: AvatarDescriptionProps) {
   );
 }
 
-type AvatarImageProps = ImageProps;
+type AvatarImageProps = ImageProps & VariantProps<typeof avatarImageVariants>;
+
+const avatarImageVariants = cva(
+  "relative overflow-hidden rounded-full border-blue-200 border",
+  {
+    variants: {
+      size: {
+        xs: "h-5 w-5 min-w-5 min-h-5",
+        sm: "h-9 w-9 min-w-9 min-h-9",
+      },
+    },
+    defaultVariants: {
+      size: "xs",
+    },
+  }
+);
 
 function AvatarImage(props: AvatarImageProps) {
-  const { src, alt, width = 40, height = 40, ...rest } = props;
-  return <Image src={src} alt={alt} width={width} height={height} {...rest} />;
+  const { src, alt, size = "xs", className, ...rest } = props;
+  return (
+    <div className={cn(avatarImageVariants({ size, className }))} {...rest}>
+      <Image src={src} alt={alt} fill className="object-cover" />
+    </div>
+  );
 }
 
 type AvatarTitleProps = {
@@ -54,9 +74,9 @@ type AvatarTitleProps = {
 function AvatarTitle(props: AvatarTitleProps) {
   const { children, className, ...rest } = props;
   return (
-    <strong className={cn("text-body-sm text-gray-200", className)} {...rest}>
+    <p className={cn("text-body-sm text-gray-200", className)} {...rest}>
       {children}
-    </strong>
+    </p>
   );
 }
 

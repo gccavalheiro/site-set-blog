@@ -1,3 +1,9 @@
+import {
+  AvatarContainer,
+  AvatarContent,
+  AvatarImage,
+  AvatarTitle,
+} from "@/components/avatar";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +30,7 @@ export function PostCard(props: PostCardProps) {
       className="w-full max-w-2xl rounded-xl border-[1px] border-gray-400 bg-gray-600 overflow-hidden transition-all duration-300 hover:border-[1px] hover:border-blue-300"
     >
       {/* Post Content */}
-      <div className="p-2 overflow-hidden">
+      <div className="p-2 flex flex-col h-full overflow-hidden">
         {/* Imagem Container */}
         <div className="relative">
           <div className="absolute bg-gray-600 rounded-bl-md top-0 right-0 px-3 py-1">
@@ -53,16 +59,13 @@ export function PostCard(props: PostCardProps) {
         </div>
 
         {/* Post footer */}
-        <div className="flex px-2 pb-2 pt-3 items-center gap-3 border-t border-gray-400">
-          <div className="relative h-5 w-5 md:h-6 md:w-6 overflow-hidden rounded-full border-blue-200 border-[1px]">
-            <Image
-              src={author.avatar}
-              alt={author.name}
-              fill
-              className="object-cover rounded-md"
-            />
-          </div>
-          <span className="text-body-sm text-gray-300">{author.name}</span>
+        <div className="flex px-2 mt-auto pb-2 pt-3 items-center gap-3 border-t border-gray-400">
+          <AvatarContainer>
+            <AvatarImage src={author.avatar} alt={author.name} size="xs" />
+            <AvatarContent>
+              <AvatarTitle className="text-gray-300">{author.name}</AvatarTitle>
+            </AvatarContent>
+          </AvatarContainer>
         </div>
       </div>
     </Link>
